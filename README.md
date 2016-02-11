@@ -91,7 +91,7 @@ Helpers::js()
 If you want to stick at a certain version then use
 
 ```
-artisan config:publish patricktalmadge/bootstrapper
+php artisan vendor:publish --provider="Bootstrapper\BootstrapperServiceProvider"
 ```
 
 And update your config file in app/config/packages.
