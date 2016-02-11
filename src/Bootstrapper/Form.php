@@ -5,7 +5,7 @@
 
 namespace Bootstrapper;
 
-use Illuminate\Html\FormBuilder;
+use Collective\Html\FormBuilder;
 
 /**
  * Creates Bootstrap 3 compliant forms
@@ -77,13 +77,13 @@ class Form extends FormBuilder
      * @param array       $options The options of the label
      * @return string
      */
-    public function label($name, $value = null, $options = array())
+    public function label($name, $value = null, $options = array(), $valueHtml = false)
     {
         $options['class'] = isset($options['class']) ?
             self::LABEL . ' ' . $options['class'] :
             self::LABEL;
 
-        return parent::label($name, $value, $options);
+        return parent::label($name, $value, $options, $valueHtml);
     }
 
     /**
@@ -578,5 +578,27 @@ class Form extends FormBuilder
 
         // Return the formatted error message, if the form element has any.
         return $errors->first($this->transformKey($name), $this->help(':message'));
+    }
+    
+    /**
+     * Create a checkable input field.
+     *
+     * @param  string $type
+     * @param  string $name
+     * @param  mixed  $value
+     * @param  bool   $checked
+     * @param  array  $options
+     *
+     * @return \Illuminate\Support\HtmlString
+     */
+    protected function checkable($type, $name, $value, $checked, $options)
+    {
+        $checked = $this->getCheckedState($type, $name, $value, $checked);
+
+        if ($checked) {
+            $options['checked'] = 'checked';
+        }
+
+        return new Checkable($this, $type, $name, $value, $options);
     }
 }

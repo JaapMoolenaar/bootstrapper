@@ -1,7 +1,11 @@
 {
-  "name": "patricktalmadge/bootstrapper",
+  "name": "jaapmoolenaar.nl/bootstrapper",
   "description": "Twitter Bootstrap markup generator",
   "license": "MIT",
+  "support": {
+    "issues": "https://github.com/Satsume/bootstrapper/issues",
+    "source": "https://github.com/Satsume/bootstrapper"
+  },
   "keywords": [
     "bootstrap",
     "laravel"
@@ -18,15 +22,22 @@
     {
       "name": "Patrick Rose",
       "email": "pjr0911025@gmail.com"
+    },
+    {
+        "name": "Jaap Moolenaar",
+        "email": "jaap@jaapmoolenaar.nl",
+        "homepage": "http://www.jaapmoolenaar.nl"
     }
   ],
   "require": {
     "php": ">=5.4.0",
-    "illuminate/html": "~4.2||~5",
-    "illuminate/support": "~4.2||~5",
-    "illuminate/config": "~4.2||~5",
-    "illuminate/routing": "~4.2||~5",
-    "twbs/bootstrap": "~3"
+    "laravelcollective/html": "^5.2",
+    "illuminate/http": "5.2.*",
+    "illuminate/config": "5.2.*",
+    "illuminate/routing": "5.2.*",
+    "illuminate/session": "5.2.*",
+    "illuminate/support": "5.2.*",
+    "illuminate/view": "5.2.*"
   },
   "require-dev": {
     "mockery/mockery": "~0.9",

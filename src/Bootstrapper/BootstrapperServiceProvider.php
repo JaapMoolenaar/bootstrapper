@@ -5,8 +5,8 @@
 
 namespace Bootstrapper;
 
-use Bootstrapper\Bridges\Config\Laravel4Config;
-use Illuminate\Html\HtmlBuilder;
+use Bootstrapper\Bridges\Config\LaravelConfig;
+use Collective\Html\HtmlBuilder;
 use Illuminate\Support\ServiceProvider;
 
 /**
@@ -22,17 +22,12 @@ class BootstrapperServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        if (!method_exists($this, 'package')) {
-            throw new \Exception(
-                "This Service Provider doesn't support Laravel 5 - please use
-                Bootstrapper\\BootstrapperL5ServiceProvider"
-            );
-        }
-
-        $this->package('patricktalmadge/bootstrapper');
-        $this->app->make('config')->package(
-            'patricktalmadge/bootstrapper',
-            __DIR__ . '/../config'
+        $this->publishes(
+            [
+                __DIR__ . '/../config/config.php' => config_path(
+                    'bootstrapper.php'
+                )
+            ]
         );
 
         $this->registerAccordion();
@@ -158,7 +153,7 @@ class BootstrapperServiceProvider extends ServiceProvider
         $this->app->bind(
             'bootstrapper::config',
             function ($app) {
-                return new Laravel4Config($app->make('config'));
+                return new LaravelConfig($app->make('config'));
             }
         );
     }
@@ -195,17 +190,12 @@ class BootstrapperServiceProvider extends ServiceProvider
     private function registerFormBuilder()
     {
         $this->app->bind(
-            'laravel5::html',
-            function ($app) {
-                return new HtmlBuilder($app->make('url'));
-            }
-        );
-        $this->app->bind(
             'bootstrapper::form',
             function ($app) {
                 $form = new Form(
-                    $app->make('laravel5::html'),
+                    $app->make('html'),
                     $app->make('url'),
+                    $app->make('view'),
                     $app['session.store']->getToken()
                 );
 

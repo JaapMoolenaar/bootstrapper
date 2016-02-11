@@ -1,10 +1,13 @@
 # Bootstrapper
 
-Latest stable version: [![Latest Stable Version](https://poser.pugx.org/patricktalmadge/bootstrapper/v/stable.svg)](https://packagist.org/packages/patricktalmadge/bootstrapper)
+[![Build Status](https://travis-ci.org/patricktalmadge/bootstrapper.svg?branch=develop)](https://travis-ci.org/patricktalmadge/bootstrapper)
+[![Total Downloads](https://poser.pugx.org/jaapmoolenaar.nl/bootstrapper/downloads)](https://packagist.org/packages/jaapmoolenaar.nl/bootstrapper)
+[![Latest Stable Version](https://poser.pugx.org/jaapmoolenaar.nl/bootstrapper/v/stable)](https://packagist.org/packages/jaapmoolenaar.nl/bootstrapper)
+[![Latest Unstable Version](https://poser.pugx.org/jaapmoolenaar.nl/bootstrapper/v/unstable)](https://packagist.org/packages/jaapmoolenaar.nl/bootstrapper)
+[![License](https://poser.pugx.org/jaapmoolenaar.nl/bootstrapper/license)](https://packagist.org/packages/jaapmoolenaar.nl/bootstrapper)
 
-Travis status : [![Build Status](https://travis-ci.org/patricktalmadge/bootstrapper.svg?branch=develop)](https://travis-ci.org/patricktalmadge/bootstrapper)
 
-Current supported Bootstrap version: 3.2.0
+Current supported Bootstrap version: 3.3.5
 
 Bootstrapper is a set of classes that allow you to quickly create Twitter 
 Bootstrap 3 style markup.
@@ -15,7 +18,7 @@ Add the following to your `composer.json` file :
 
 ```json
 "require": {
-    "patricktalmadge/bootstrapper": "~5",
+    "jaapmoolenaar.nl/bootstrapper": "~5",
 },
 ```
 
@@ -23,13 +26,6 @@ Then register Bootstrapper's service provider with Laravel:
 
 ```php
 'Bootstrapper\BootstrapperServiceProvider',
-```
-
-If you are using Laravel 5, then you should instead use the Laravel 5 service
-provider.
-
-```php
-'Bootstrapper\BootstrapperL5ServiceProvider',
 ```
 
 You can then (if you want to) add the following aliases to your `aliases` 
@@ -81,7 +77,7 @@ supports (but open an issue to let us know!).
 ```html
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
 <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 ```
 
 If you want to get the latest Bootstrap that Bootstrapper supports,

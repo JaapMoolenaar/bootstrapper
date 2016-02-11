@@ -270,7 +270,12 @@ class ControlGroup extends RenderedObject
      */
     public function createControlDiv()
     {
-        return sprintf("<div class='col-sm-%s'>", $this->controlSize);
+        $offset = '';
+        if(!$this->label) {
+            $offset = ' col-sm-offset-'.($this->labelSize ?: 12 - $this->controlSize);
+        }
+        
+        return sprintf("<div class='col-sm-%s%s'>", $this->controlSize, $offset);
     }
 
     /**

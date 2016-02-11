@@ -2,9 +2,9 @@
 
 namespace Bootstrapper\Bridges\Config;
 
-use Illuminate\Config\Repository;
+use Illuminate\Contracts\Config\Repository;
 
-class Laravel4Config implements ConfigInterface
+class LaravelConfig implements ConfigInterface
 {
 
     /**
@@ -12,9 +12,6 @@ class Laravel4Config implements ConfigInterface
      */
     private $repository;
 
-    /**
-     * @param Repository $repository
-     */
     public function __construct(Repository $repository)
     {
         $this->repository = $repository;
@@ -22,16 +19,16 @@ class Laravel4Config implements ConfigInterface
 
     public function getIconPrefix()
     {
-        return $this->repository->get('bootstrapper::icon_prefix');
+        return $this->repository->get('bootstrapper.icon_prefix');
     }
 
     public function getBootstrapperVersion()
     {
-        return $this->repository->get('bootstrapper::bootstrapVersion');
+        return $this->repository->get('bootstrapper.bootstrapVersion');
     }
 
     public function getJQueryVersion()
     {
-        return $this->repository->get('bootstrapper::jqueryVersion');
+        return $this->repository->get('bootstrapper.jqueryVersion');
     }
 }
