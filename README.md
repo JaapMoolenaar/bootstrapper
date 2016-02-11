@@ -94,7 +94,7 @@ If you want to stick at a certain version then use
 php artisan vendor:publish --provider="Bootstrapper\BootstrapperServiceProvider"
 ```
 
-And update your config file in app/config/packages.
+And update your config file in config/bootstrapper.php
 
 We also have Twitter Bootstrap as a dependency, so you can grab the files from
 your vendor directory.
