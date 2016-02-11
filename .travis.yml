@@ -8,15 +8,14 @@ php:
   - hhvm
   - 7.0
 
-env:
-  - LARAVEL_VERSION="~5"
-
 matrix:
   allow_failures:
     - php: hhvm
     - php: 7.0
 
+before_install:
+  - composer update # Use update since we'll be changing the composer.json
+
 script:
   - vendor/bin/phpspec run
   - vendor/bin/phpcs --standard=PSR2 src
-  
