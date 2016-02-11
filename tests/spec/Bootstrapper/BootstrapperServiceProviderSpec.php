@@ -23,7 +23,7 @@ namespace spec\Bootstrapper {
 
         function it_is_initializable()
         {
-            $this->shouldHaveType('Bootstrapper\BootstrapperServiceProviderSpec');
+            $this->shouldHaveType('Bootstrapper\BootstrapperServiceProvider');
         }
 
         function it_can_register_things()
@@ -38,7 +38,7 @@ namespace spec\Bootstrapper {
                 'bootstrapper::buttongroup' => 'Bootstrapper\\ButtonGroup',
                 'bootstrapper::button' => 'Bootstrapper\\Button',
                 'bootstrapper::carousel' => 'Bootstrapper\\Carousel',
-                'bootstrapper::config' => 'Bootstrapper\\Bridges\\Config\\Laravel5Config',
+                'bootstrapper::config' => 'Bootstrapper\\Bridges\\Config\\LaravelConfig',
                 'bootstrapper::controlgroup' => 'Bootstrapper\\ControlGroup',
                 'bootstrapper::dropdownbutton' => 'Bootstrapper\\DropdownButton',
                 'bootstrapper::form' => 'Bootstrapper\\Form',

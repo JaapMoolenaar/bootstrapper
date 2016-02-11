@@ -2,11 +2,14 @@
 
 namespace spec\Bootstrapper\Bridges\Config;
 
-use Illuminate\Config\Repository;
+use Illuminate\Contracts\Config\Repository;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 
-class Laravel4ConfigSpec extends ObjectBehavior
+/**
+ * @require \Illuminate\Contracts\Config\Repository
+ */
+class LaravelConfigSpec extends ObjectBehavior
 {
     function let(Repository $repository)
     {
@@ -15,13 +18,13 @@ class Laravel4ConfigSpec extends ObjectBehavior
 
     function it_is_initializable()
     {
-        $this->shouldHaveType('Bootstrapper\Bridges\Config\Laravel4Config');
+        $this->shouldHaveType('Bootstrapper\Bridges\Config\LaravelConfig');
         $this->shouldHaveType('Bootstrapper\Bridges\Config\ConfigInterface');
     }
 
     function it_has_a_method_for_getting_the_icon_prefix(Repository $repository)
     {
-        $repository->get('bootstrapper::icon_prefix')
+        $repository->get('bootstrapper.icon_prefix')
             ->willReturn('glyphicon')
             ->shouldBeCalled(1);
 
@@ -30,7 +33,7 @@ class Laravel4ConfigSpec extends ObjectBehavior
 
     function it_has_a_method_of_getting_the_bootstrapper_version(Repository $repository)
     {
-        $repository->get('bootstrapper::bootstrapVersion')
+        $repository->get('bootstrapper.bootstrapVersion')
             ->willReturn('3.2.1')
             ->shouldBeCalled(1);
 
@@ -39,7 +42,7 @@ class Laravel4ConfigSpec extends ObjectBehavior
 
     function it_has_a_method_of_getting_the_jquery_version(Repository $repository)
     {
-        $repository->get('bootstrapper::jqueryVersion')
+        $repository->get('bootstrapper.jqueryVersion')
             ->willReturn('3.2.1')
             ->shouldBeCalled(1);
 
