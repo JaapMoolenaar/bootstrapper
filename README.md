@@ -1,11 +1,10 @@
 # Bootstrapper
 
 [![Build Status](https://travis-ci.org/patricktalmadge/bootstrapper.svg?branch=develop)](https://travis-ci.org/patricktalmadge/bootstrapper)
-[![Total Downloads](https://poser.pugx.org/jaapmoolenaar.nl/bootstrapper/downloads)](https://packagist.org/packages/jaapmoolenaar.nl/bootstrapper)
-[![Latest Stable Version](https://poser.pugx.org/jaapmoolenaar.nl/bootstrapper/v/stable)](https://packagist.org/packages/jaapmoolenaar.nl/bootstrapper)
-[![Latest Unstable Version](https://poser.pugx.org/jaapmoolenaar.nl/bootstrapper/v/unstable)](https://packagist.org/packages/jaapmoolenaar.nl/bootstrapper)
+[![Latest Stable Version](https://poser.pugx.org/jaapmoolenaar.nl/bootstrapper/v/stable)](https://packagist.org/packages/jaapmoolenaar.nl/bootstrapper) 
+[![Total Downloads](https://poser.pugx.org/jaapmoolenaar.nl/bootstrapper/downloads)](https://packagist.org/packages/jaapmoolenaar.nl/bootstrapper) 
+[![Latest Unstable Version](https://poser.pugx.org/jaapmoolenaar.nl/bootstrapper/v/unstable)](https://packagist.org/packages/jaapmoolenaar.nl/bootstrapper) 
 [![License](https://poser.pugx.org/jaapmoolenaar.nl/bootstrapper/license)](https://packagist.org/packages/jaapmoolenaar.nl/bootstrapper)
-
 
 Current supported Bootstrap version: 3.3.5
 
