@@ -90,21 +90,21 @@ class Checkable extends RenderedObject
         return "<div $attributes>$label</div>";
     }
 
-    public function withOptions($options) 
+    public function withOptions($options)
     {
         $this->options = $options;
         
         return $this;
     }
     
-    public function withLabel($label) 
+    public function withLabel($label)
     {
         $this->label = $label;
         
         return $this;
     }
     
-    public function withLabelOptions($labelOptions) 
+    public function withLabelOptions($labelOptions)
     {
         $this->labelOptions = $labelOptions;
         
