@@ -81,7 +81,7 @@ class Checkable extends RenderedObject
         );
         
         $input = $this->form->input($this->type, $this->name, $this->value, $this->options);
-        if($this->label) {
+        if ($this->label) {
             $input .= '<span>' . $this->label.'</span>';
         }
         
@@ -90,19 +90,22 @@ class Checkable extends RenderedObject
         return "<div $attributes>$label</div>";
     }
 
-    public function withOptions($options) {
+    public function withOptions($options) 
+    {
         $this->options = $options;
         
         return $this;
     }
     
-    public function withLabel($label) {
+    public function withLabel($label) 
+    {
         $this->label = $label;
         
         return $this;
     }
     
-    public function withLabelOptions($labelOptions) {
+    public function withLabelOptions($labelOptions) 
+    {
         $this->labelOptions = $labelOptions;
         
         return $this;
