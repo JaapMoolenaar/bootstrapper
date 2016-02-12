@@ -88,7 +88,10 @@ namespace spec\Bootstrapper {
                     $mock->shouldReceive('set');
                     return $mock;
                 case 'html':
-                    $mock = \Mockery::mock('Illuminate\\Html\\HtmlBuilder');
+                    $mock = \Mockery::mock('Collective\\Html\\HtmlBuilder');
+                    return $mock;
+                case 'view':
+                    $mock = \Mockery::mock('Illuminate\\View\\Factory');
                     return $mock;
                 case 'url':
                     $mock = \Mockery::mock('Illuminate\\Routing\\UrlGenerator');
