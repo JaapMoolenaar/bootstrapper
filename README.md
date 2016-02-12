@@ -1,6 +1,6 @@
 # Bootstrapper
 
-[![Build Status](https://travis-ci.org/patricktalmadge/bootstrapper.svg?branch=develop)](https://travis-ci.org/patricktalmadge/bootstrapper)
+[![Build Status](https://api.travis-ci.org/Satsume/bootstrapper.svg?branch=master)](https://travis-ci.org/Satsume/bootstrapper)
 [![Latest Stable Version](https://poser.pugx.org/jaapmoolenaar.nl/bootstrapper/v/stable)](https://packagist.org/packages/jaapmoolenaar.nl/bootstrapper) 
 [![Total Downloads](https://poser.pugx.org/jaapmoolenaar.nl/bootstrapper/downloads)](https://packagist.org/packages/jaapmoolenaar.nl/bootstrapper) 
 [![Latest Unstable Version](https://poser.pugx.org/jaapmoolenaar.nl/bootstrapper/v/unstable)](https://packagist.org/packages/jaapmoolenaar.nl/bootstrapper) 
