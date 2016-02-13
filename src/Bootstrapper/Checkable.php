@@ -75,7 +75,7 @@ class Checkable extends RenderedObject
     {
         $input = $this->form->input($this->type, $this->name, $this->value, $this->options);
         if (!$this->label) {
-            return $input;
+            return (string)$input;
         }
         
         $attributes = new Attributes(
