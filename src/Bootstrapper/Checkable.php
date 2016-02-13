@@ -73,6 +73,11 @@ class Checkable extends RenderedObject
      */
     public function render()
     {
+        $input = $this->form->input($this->type, $this->name, $this->value, $this->options);
+        if (!$this->label) {
+            return $input;
+        }
+        
         $attributes = new Attributes(
             $this->attributes,
             [
@@ -80,10 +85,7 @@ class Checkable extends RenderedObject
             ]
         );
         
-        $input = $this->form->input($this->type, $this->name, $this->value, $this->options);
-        if ($this->label) {
-            $input .= '<span>' . $this->label.'</span>';
-        }
+        $input .= '<span>' . $this->label . '</span>';
         
         $label = '<label>' . $input . '</label>';
         
