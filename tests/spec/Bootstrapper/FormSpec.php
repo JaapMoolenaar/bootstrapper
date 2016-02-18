@@ -191,8 +191,8 @@ class FormSpec extends ObjectBehavior
 
     function it_overrides_the_submit_method()
     {
-        $this->submit('foo')->toHtml()->shouldBe(
-            '<input class="btn btn-default" type="submit" value="foo">'
+        $this->submit('foo')->render()->shouldBe(
+            "<button type='submit' class='btn btn-primary'>foo</button>"
         );
     }
 
