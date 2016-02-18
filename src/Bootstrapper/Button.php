@@ -187,10 +187,13 @@ class Button extends RenderedObject
      *                         button
      * @return Button
      */
-    public function normal($contents = '')
+    public function normal($contents = null)
     {
-        return $this->setType(self::NORMAL)
-            ->withValue($contents);
+        if (null !== $contents) {
+            $this->withValue($contents);
+        }
+        
+        return $this->setType(self::NORMAL);
     }
 
     /**
@@ -200,10 +203,13 @@ class Button extends RenderedObject
      *                         button
      * @return Button
      */
-    public function primary($contents = '')
+    public function primary($contents = null)
     {
-        return $this->setType(self::PRIMARY)
-            ->withValue($contents);
+        if (null !== $contents) {
+            $this->withValue($contents);
+        }
+        
+        return $this->setType(self::PRIMARY);
     }
 
     /**
@@ -213,10 +219,13 @@ class Button extends RenderedObject
      *                         button
      * @return Button
      */
-    public function success($contents = '')
+    public function success($contents = null)
     {
-        return $this->setType(self::SUCCESS)
-            ->withValue($contents);
+        if (null !== $contents) {
+            $this->withValue($contents);
+        }
+        
+        return $this->setType(self::SUCCESS);
     }
 
     /**
@@ -225,10 +234,13 @@ class Button extends RenderedObject
      * @param string $contents The contents of the button
      * @return Button
      */
-    public function info($contents = '')
+    public function info($contents = null)
     {
-        return $this->setType(self::INFO)
-            ->withValue($contents);
+        if (null !== $contents) {
+            $this->withValue($contents);
+        }
+        
+        return $this->setType(self::INFO);
     }
 
     /**
@@ -237,10 +249,13 @@ class Button extends RenderedObject
      * @param string $contents The contents of the button
      * @return Button
      */
-    public function warning($contents = '')
+    public function warning($contents = null)
     {
-        return $this->setType(self::WARNING)
-            ->withValue($contents);
+        if (null !== $contents) {
+            $this->withValue($contents);
+        }
+        
+        return $this->setType(self::WARNING);
     }
 
     /**
@@ -249,10 +264,13 @@ class Button extends RenderedObject
      * @param string $contents The contents of the button
      * @return Button
      */
-    public function danger($contents = '')
+    public function danger($contents = null)
     {
-        return $this->setType(self::DANGER)
-            ->withValue($contents);
+        if (null !== $contents) {
+            $this->withValue($contents);
+        }
+        
+        return $this->setType(self::DANGER);
     }
 
     /**
@@ -261,10 +279,13 @@ class Button extends RenderedObject
      * @param string $contents The contents of the button
      * @return Button
      */
-    public function link($contents = '')
+    public function link($contents = null)
     {
-        return $this->setType(self::LINK)
-            ->withValue($contents);
+        if (null !== $contents) {
+            $this->withValue($contents);
+        }
+        
+        return $this->setType(self::LINK);
     }
 
     /**

@@ -63,10 +63,11 @@ class Form extends FormBuilder
      */
     public function submit($value = null, $options = array())
     {
-        $options['class'] = isset($options['class']) ?
-            'btn ' . Button::NORMAL . ' ' . $options['class'] :
-            'btn ' . Button::NORMAL;
-        return parent::submit($value, $options);
+        return (new Button())
+                ->submit()
+                ->primary()
+                ->withAttributes($options)
+                ->withValue($value);
     }
 
     /**
