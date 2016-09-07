@@ -31,7 +31,7 @@
   ],
   "require": {
     "php": ">=5.4.0",
-    "laravelcollective/html": "^5.2",
+    "jaapmoolenaar.nl/html": "^5.2",
     "illuminate/http": "5.2.*",
     "illuminate/config": "5.2.*",
     "illuminate/routing": "5.2.*",
